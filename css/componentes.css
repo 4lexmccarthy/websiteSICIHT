@@ -21,10 +21,20 @@
 }
 /* HEADER WRAPPER */
 
+/* BOLITAS */
+.bolitas{
+ color: red;
+}
+/* BOLITAS */
+
 
 /* MEDIA QUERIES (BASADAS EN UNAH) */
 @media (max-width:480px){
-
+/* BOLITAS */
+.bolitas{
+ color: azul;
+}
+/* BOLITAS */
 }
 
 @media (min-width:481px) and (max-width: 768px){
