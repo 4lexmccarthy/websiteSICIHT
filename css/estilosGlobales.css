@@ -1,7 +1,7 @@
-/* LAST MODIFIED: 04/08/2024*/
+/* LAST MODIFIED: 04/17/2025*/
 *{
 	box-sizing: border-box;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 br{
 	user-select: none;
@@ -19,11 +19,22 @@ body{
 	text-align: center;
 }
 .normal-cont > p, .normal-cont > h2{
-	font-weight: 300;
 	width: 80%;
 }
 
-/*Variables globales*/
+.padding0{
+ padding: 0 !important; /*!important asegura que el objeto no tenga padding!*/
+}
+
+.margin0{
+ margin: 0 !important; /*!important asegura que el objeto no tenga margenes!*/
+}
+
+.width100{
+ width: 100% !important; /*!important asegura que el objeto ocupe todo el espacio horizontal disponible!*/
+}
+
+/*Colores globales*/
 :root{
 	font-size: 16px;
 	--white: #ffffff;
@@ -32,18 +43,19 @@ body{
 	--gray2:#6e6e73;
 	--gray3:#a1a1a6;
 	--gray4: #f2f2f2; 
-	--color1: #1ca68a;
-	--color2: #FFD769;
-	--color3: #FF3E4C;
-	--color4: #2B94D6;
-	--color5: #9461BF;
+ --color0: #000A39;
+	--color1: #003775;
+	--color2: #FFCB07;
+	--color3: #F26521;
+	--color4: #10AAC3;
+	--color5: #8DC63F;
 }
-/*Variables globales*/
+/*Colores globales*/
 
 /*Text Styles*/
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Inter', sans-serif;
-	font-weight: 800;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	letter-spacing: -.035em;
 	line-height: 1.1em;
 	margin:0.5rem 0;
@@ -70,7 +82,7 @@ h1,h2,h3,h4,h5,h6{
 	var(--gray1);
 }
 .light{
-	font-weight: 300;
+	font-weight: 200;
 }
 .normal{
 	font-weight: normal;
@@ -82,7 +94,7 @@ h1,h2,h3,h4,h5,h6{
 	font-weight: 600;
 }
 .bold{
-	font-weight: bold;
+	font-weight: 700;
 }
 .italic{
 	font-style: italic;
@@ -97,7 +109,7 @@ h1,h2,h3,h4,h5,h6{
 	text-align: center !important; /*!important asegura que el texto siempre quede centrado!*/
 }
 .link{
-	/* color: var(--color4); */
+	color: var(--color4);
 	text-decoration: none;
 }
 .link-gray1{
@@ -142,7 +154,7 @@ h1,h2,h3,h4,h5,h6{
 .btn a{
 	display: block;
 	padding: 0.5em 1em;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 1.05rem;
 	font-weight: 700;
 	text-decoration: none;
@@ -236,7 +248,7 @@ h1,h2,h3,h4,h5,h6{
 
 /*Scroll to top button*/
 .scroll-top1 {
-	cursor: pointer;
+	cursor: poMontserrat;
  display: none;
 	position: fixed;
 	z-index: 8000;
