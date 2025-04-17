@@ -4,11 +4,20 @@
 
 /* HEADER WRAPPER */
 .headerWrapper{
- padding: 0.5rem 0 0.5rem 0;
+ padding: 0.6rem 0;
  background-color: var(--color1);
  color: white;
  text-align: center;
  text-transform: uppercase;
+}
+.headerWrapper > h1,
+.headerWrapper > h2,
+.headerWrapper > h3,
+.headerWrapper > h4,
+.headerWrapper > h5,
+.headerWrapper > p{
+ width: 90%;
+ margin: 0.7rem 0 !important; /* tiene prioridad sobre estilos de la UNAH y de media queries*/
 }
 /* HEADER WRAPPER */
 

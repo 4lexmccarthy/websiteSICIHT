@@ -18,8 +18,13 @@ body{
 	align-items: center;
 	text-align: center;
 }
-.normal-cont p, .normal-cont h2{
-	width: 80%;
+
+.flexContainer{
+ display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .padding0{
@@ -153,13 +158,13 @@ h1,h2,h3,h4,h5,h6{
 /*Text Styles*/
 
 /*Butons*/
-.btn{
+.customBtn{
 	background: none;
 	border:none;
 	padding: 1rem;
 }
 
-.btn a{
+.customBtn a{
 	display: block;
 	padding: 0.5em 1em;
 	font-family: 'Montserrat', sans-serif;
@@ -175,7 +180,7 @@ h1,h2,h3,h4,h5,h6{
 	color 150ms ease;
 }
 
-.btn:active, .btn a:active{
+.customBtn:active, .customBtn a:active{
 	transform: scale(0.95);
 }
 .paddingL{
@@ -255,10 +260,15 @@ h1,h2,h3,h4,h5,h6{
 /* MEDIA QUERIES (BASADAS EN UNAH) */
 @media (max-width:480px){
 	.normal-cont  p, .normal-cont  h2, .normal-cont h1{
-		width: 90%;
 		text-align: left;
 	}
 	.normal-cont  p{
+		text-align: justify;
+	}
+ .flexContainer  p, .flexContainer  h2, .flexContainer h1{
+		text-align: left;
+	}
+	.flexContainer  p{
 		text-align: justify;
 	}
 }
