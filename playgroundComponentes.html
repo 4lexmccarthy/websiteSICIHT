@@ -1,153 +1,166 @@
-<!--LAST MODIFIED: 5/4/2022-->
+<!--LAST MODIFIED: 4/17/2025-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>SICIHT | Propuesta 2025</title>
- <link rel="shortcut icon" type="img/png" href="assets/icons/test-icon.svg">
+ <meta name="theme-color" content="#003775">
+ <title>Propuesta SICIHT | Playground Componentes</title>
+ <link rel="shortcut icon" type="img/svg" href="assets/icons/formularioProyectos.svg">
  <!--External Links-->
  <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- <!--External Links-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+ <!-- Stylesheets -->
  <link rel="stylesheet" href="css/estilosGlobales.css">
+ <link rel="stylesheet" href="css/componentes.css">
+ <style>
+.previewArea{
+ width: 100%;
+ min-height: 50vh;
+ margin: 1rem 0 1rem 0;
+ background: white;
+ }
+ /*footer*/
+footer {
+	width: 100%;
+	margin: 0 auto 2rem auto;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+	color: var(--gray2);
+	font-size: 0.8rem;
+	user-select: none;
+}
+/*footer*/
+ </style>
 </head>
+<body style="background-color: var(--gray4);">
+<main class="normal-cont">
+ <header class="normal-cont padding0 width100">
+  <button class="btn dark1"><a href="index.html"><i class="fa fa-home"></i>&nbsp;&nbsp;Ir a Inicio</a></button>
+  <h1 class="h1"><span style="color: var(--color4);">Playground Componentes</span></h1>
+  <p class="p left">Vista previa del contenido que ira en el bloque <b class="semibold">“Contenido HTML”</b>. Para aplicar este diseño en la plataforma de la UNAH, solo copia y pega todas las líneas de código entre los comentarios <i class="medium">“INSERTA TU CODIGO PERSONALIZADO AQUI”</i>.</p>
+ </header>
 
-<style>
- /* LAST MODIFIED: 5/4/2022*/
+ <h2 class="h2" style="margin-top: 3rem;">Encabezado de Secciones (headerWrapper)</h2>
+ <p class="p left" style="margin-top: 0;">Este cosito se usa para encapsular titulos que permiten distinguir secciones dentro de la pagina. Puede usarse con etiquetas H1, H2 y H3. El tamaño del elemento cambiara segun el nivel de titulo usado. La combinacion de colores puede modificarse directamente en el atributo style.</p>
+ <div class="previewArea" style="min-height: auto;">
+  <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
 
-*{
-	margin:0;
-}
-body {
-	min-height: 100vh;
- display: flex;
- flex-flow: column nowrap;
- justify-content: center;
- align-items: center;
-}
-
-/* LAST MODIFIED: 16/4/2025*/
-/* MEDIA QUERIES */
-@media (max-width: 480px) {
-  .h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 769px) {
-  .h1 {
-    font-size: 2.5rem;
-  }
-}
-</style>
-<body>
- <!-- JUEGA CON CODIGO AQUI -->
- <div class="normal-cont">
-  <h1 class="h1">💖 Hola, Honey!</h1>
-  <p class="p" style="margin-top: 2rem;">Amo este hermoso mensaje: ¡Que honor poder compartir proyectos con el amor de mi vida! 😍😍 Estoy seguro que este es el primero de muchos que están por venir.</p>
-  <br>
-  <p class="p">En este documento puedes encontrar la base de mis trabajos anteriores para que te sirvan de guía a la hora de crear los componentes de la página del SICIHT. Los podés ir trabajando directamente en esta página, solo crea una nueva sección por cada componente para que sea más fácil visualizarlos y reutilizarlos. </p>
-  <br>
-  <p class="p">Si tienes alguna pregunta, me la haces saber, okay? Te amo! 💘Y yo te AMOOOOOO, me encantas demasiado y me pones happy💞</p>
- </div>
- <!-- JUEGA CON CODIGO AQUI -->
-<footer>
- <p>McCarthy-Beckan | 2025</p>
-</footer>
-
-<section id="home">
-    <h2>Inicio</h2>
-    <p>Bienvenido al sitio web del SICIHT UNAH. Descubre nuestras áreas de investigación, servicios y actividades académicas.</p>
-  </section>
-
-  <section id="sobre-siciht">
-    <h2>Sobre el SICIHT</h2>
-    <p>Información general sobre el Sistema de Investigación Científica y Humanística de la UNAH.</p>
-  </section>
-
-  <section id="mensaje-director" style="color:var(--color4)">
-    <h2>Mensaje del Director</h2>
-    <p>Conoce las palabras del Director sobre la visión y objetivos del SICIHT para 2025.</p>
-  </section>
-
-  <section id="estructura-vra">
-    <h2>Estructura Organizacional</h2>
-    <p>Organigrama y departamentos que conforman la VRA-DICIHT.</p>
-  </section>
-
-  <section id="mision-vision">
-    <h2>Misión y Visión</h2>
-    <p>Declaración de misión y visión institucional.</p>
-  </section>
-
-  <section id="tramites-servicios">
-    <h2>Trámites y Servicios</h2>
-    <ul>
-      <li>Solicitudes de apoyo a la investigación</li>
-      <li>Acceso a fondos concursables</li>
-      <li>Registro de proyectos</li>
-    </ul>
-  </section>
-
-  <section id="info-institucional">
-    <h2>Información Institucional</h2>
-    <p>Documentación oficial, historia institucional, y estructura normativa.</p>
-  </section>
-
-  <section id="convocatorias">
-    <h2>Convocatorias</h2>
-    <p>Consulta las convocatorias abiertas y pasadas para proyectos científicos.</p>
-  </section>
-
-  <section id="fondos-concursables">
-    <h2>Fondos Concursables</h2>
-    <p>Información sobre los recursos financieros disponibles mediante concursos institucionales.</p>
-  </section>
-
-  <section id="registro">
-    <h2>Registro</h2>
-    <p>Registro oficial de proyectos, investigadores y actividades académicas.</p>
-  </section>
-
-  <section id="reconocimientos">
-    <h2>Reconocimientos</h2>
-    <p>Premiaciones y reconocimientos otorgados por el SICIHT.</p>
-  </section>
-
-  <section id="congresos">
-    <h2>Congresos</h2>
-    <p>Información sobre congresos científicos organizados o apoyados por la VRA-DICIHT.</p>
-  </section>
-
-  <section id="politica-normativa">
-    <h2>Política y Normativa</h2>
-    <p>Consulta reglamentos, políticas internas y marcos normativos aplicables.</p>
-  </section>
-
-  <section id="comunicacion-ciencia">
-    <h2>Comunicación de la Ciencia</h2>
-    <p>Acciones y medios para divulgar los avances científicos a la sociedad.</p>
-  </section>
-
-  <section id="formacion-cientifica">
-    <h2>Formación Científica</h2>
-    <p>Programas de formación, cursos, talleres y diplomados ofrecidos.</p>
-  </section>
-
-  <section id="internacionalizacion">
-    <h2>Internacionalización</h2>
-    <p>Alianzas estratégicas y colaboraciones con instituciones a nivel internacional.</p>
-  </section>
+  <header class="headerWrapper normal-cont">
+   <h2 class="h2">Hola, Soy el titulo de una seccion (Azul Oscuro)</h2>
+  </header>
   
+  <header class="headerWrapper normal-cont" style="background-color: white; color: var(--color1);">
+   <h2 class="h2">Hola, Soy el titulo de una seccion (Blanco - Azul Oscuro)</h2>
+  </header>
+
+  <header class="headerWrapper normal-cont" style="background-color: var(--color4);">
+   <h2 class="h2">Hola, Soy el titulo de una seccion (Azul claro)</h2>
+  </header>
+  
+ <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+ </div>
+
+ <h2 class="h2" style="margin-top: 3rem;">🐣 Cositas Lucy</h2>
+ <p class="p" style="margin-top: 0;">Descripción del componente aqui plis. thanks.</p>
+ <div class="previewArea">
+  <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+
+  <section id="home">
+   <h2>Inicio</h2>
+   <p>Bienvenido al sitio web del SICIHT UNAH. Descubre nuestras áreas de investigación, servicios y actividades académicas.</p>
+ </section>
+
+ <section id="sobre-siciht">
+   <h2>Sobre el SICIHT</h2>
+   <p>Información general sobre el Sistema de Investigación Científica y Humanística de la UNAH.</p>
+ </section>
+
+ <section id="mensaje-director">
+   <h2>Mensaje del Director</h2>
+   <p>Conoce las palabras del Director sobre la visión y objetivos del SICIHT para 2025.</p>
+ </section>
+
+ <section id="estructura-vra">
+   <h2>Estructura Organizacional</h2>
+   <p>Organigrama y departamentos que conforman la VRA-DICIHT.</p>
+ </section>
+
+ <section id="mision-vision">
+   <h2>Misión y Visión</h2>
+   <p>Declaración de misión y visión institucional.</p>
+ </section>
+
+ <section id="tramites-servicios">
+   <h2>Trámites y Servicios</h2>
+   <ul>
+     <li>Solicitudes de apoyo a la investigación</li>
+     <li>Acceso a fondos concursables</li>
+     <li>Registro de proyectos</li>
+   </ul>
+ </section>
+
+ <section id="info-institucional">
+   <h2>Información Institucional</h2>
+   <p>Documentación oficial, historia institucional, y estructura normativa.</p>
+ </section>
+
+ <section id="convocatorias">
+   <h2>Convocatorias</h2>
+   <p>Consulta las convocatorias abiertas y pasadas para proyectos científicos.</p>
+ </section>
+
+ <section id="fondos-concursables">
+   <h2>Fondos Concursables</h2>
+   <p>Información sobre los recursos financieros disponibles mediante concursos institucionales.</p>
+ </section>
+
+ <section id="registro">
+   <h2>Registro</h2>
+   <p>Registro oficial de proyectos, investigadores y actividades académicas.</p>
+ </section>
+
+ <section id="reconocimientos">
+   <h2>Reconocimientos</h2>
+   <p>Premiaciones y reconocimientos otorgados por el SICIHT.</p>
+ </section>
+
+ <section id="congresos">
+   <h2>Congresos</h2>
+   <p>Información sobre congresos científicos organizados o apoyados por la VRA-DICIHT.</p>
+ </section>
+
+ <section id="politica-normativa">
+   <h2>Política y Normativa</h2>
+   <p>Consulta reglamentos, políticas internas y marcos normativos aplicables.</p>
+ </section>
+
+ <section id="comunicacion-ciencia">
+   <h2>Comunicación de la Ciencia</h2>
+   <p>Acciones y medios para divulgar los avances científicos a la sociedad.</p>
+ </section>
+
+ <section id="formacion-cientifica">
+   <h2>Formación Científica</h2>
+   <p>Programas de formación, cursos, talleres y diplomados ofrecidos.</p>
+ </section>
+
+ <section id="internacionalizacion">
+   <h2>Internacionalización</h2>
+   <p>Alianzas estratégicas y colaboraciones con instituciones a nivel internacional.</p>
+ </section>
+  
+ <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+ </div>
+</main>
+
+<footer>
+ <p >McCarthy-Beckan | 2025</p>
+</footer>
 </body>
 </html>

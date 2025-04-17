@@ -11,7 +11,7 @@ body{
 }
 
 .normal-cont{
-	padding: 4rem 5vw;
+	padding: 4rem 12vw;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -25,16 +25,18 @@ body{
 .padding0{
  padding: 0 !important; /*asegura que el objeto no tenga padding!*/
 }
+
 .margin0{
  margin: 0 !important; /*asegura que el objeto no tenga margenes!*/
 }
+
 .width100{
  width: 100% !important; /*asegura que el objeto ocupe todo el espacio horizontal disponible!*/
 }
 
 /*Colores globales*/
 :root{
-	font-size: 14px;
+	font-size: 16px;
 	--white: #ffffff;
 	--black:#000000;
 	--gray1: #434343; 
@@ -59,7 +61,7 @@ h1,h2,h3,h4,h5,h6{
 	margin:0.5rem 0;
 }
 
-/* .h1{
+.h1{
 	font-size: 3.8rem;
 }
 .h2{
@@ -79,9 +81,6 @@ h1,h2,h3,h4,h5,h6{
 	line-height: 1.5rem;
 	color: var(--gray1);
 }
- */
-
-/* El tamaño del texto esta heredado de los estilos de la UNAH (theme-portalunah.css) */
 
 .light{
 	font-weight: 200;
@@ -109,12 +108,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .center{
 	text-align: center !important; /*!important asegura que el texto siempre quede centrado!*/
-}
-.left{
- text-align: left;
-}
-.justify{
- text-align: justify;
 }
 .link{
 	color: var(--color4);
@@ -194,7 +187,6 @@ h1,h2,h3,h4,h5,h6{
 	background: var(--black);
 	color: var(--white);
 }
-
 .light1 a{
 	border: solid 2px var(--white);
 	color: var(--white);
@@ -238,6 +230,7 @@ h1,h2,h3,h4,h5,h6{
 
 .danger a{
 	color: var(--color3);
+	
 }
 .danger a:hover, .danger a:focus{
 	background: var(--color3);
@@ -252,8 +245,125 @@ h1,h2,h3,h4,h5,h6{
 	color: var(--white);
 }
 
-/* MEDIA QUERIES (BASADAS EN UNAH) */
-@media (max-width:480px){
+/*Butons*/
+
+/*Scroll to top button*/
+.scroll-top1 {
+	cursor: poMontserrat;
+ display: none;
+	position: fixed;
+	z-index: 8000;
+	width: 2em;
+	height: 2em;
+	bottom: 20px;
+	right: 20px;
+	border: solid 2px var(--black);
+	border-radius: 100%;
+	background: var(--white);
+	color: var(--black);
+	text-align: center;
+	line-height: 1.7em;
+	font-size: 1.5rem;
+	text-decoration: none;
+	transition:
+	transform 50ms ease,
+	background 150ms ease,
+	color 150ms ease;
+}
+.scroll-top1:hover {
+	background: var(--black);
+	color: var(--white);
+}
+.scroll-top1:focus {
+	transform: scale(0.95);
+}
+/*Scroll to top button*/
+
+/*Forms*/
+input[type=text],input[type=number]{
+	box-sizing: border-box;
+	padding: 0.5em 1em;
+	border-radius: 500px;
+	border: solid 2px var(--gray3);
+	transition: border ease-in-out 50ms;
+}
+
+input[type=text]:hover,
+input[type=number]:hover
+{
+	border: solid 2px var(--color4);
+}
+
+input[type=text]:focus,
+input[type=number]:focus
+{
+	border: solid 2px var(--color4);
+	outline:
+	none;
+}
+
+input[type=color]{
+	background:transparent;
+	border: none;
+	height: 3em;
+	outline: none;
+	width: 3em;
+ appearance: none;
+	-webkit-appearance: none;
+}
+input[type=color]::-webkit-color-swatch-wrapper {
+	padding: 0; 
+}
+input[type=color]::-webkit-color-swatch {
+	border: 2px solid var(--gray3);
+	border-radius: 50%;
+}
+/*Forms*/
+
+/*Code blocks*/
+code{
+	padding: 0.05em 0.4em;
+	background: #ece099;
+	color:#026838;
+	font-family: monospace;
+	font-size: 1.1rem;
+	border-radius: 0.2em;
+}
+.code-note{
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin: 0.8em auto 1em auto;
+	padding: 0.3em 1em;
+	font-family: monospace;
+	font-size: 0.7rem;
+	background-color: var(--gray1);
+	color:#34ebc0;
+	border-radius: 100px;
+}
+.nowrap{
+	white-space: nowrap;
+}
+/*Code blocks*/
+
+/*footer*/
+footer {
+	width: 100%;
+	margin: 0 auto 2rem auto;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: center;
+	color: var(--gray2);
+	font-size: 0.8rem;
+	user-select: none;
+}
+/*footer*/
+
+@media (max-width:576px){
+	.h1{
+		font-size: 3.2rem;
+	}
 	.normal-cont  p, .normal-cont  h2, .normal-cont h1{
 		width: 90%;
 		text-align: left;
@@ -263,17 +373,35 @@ h1,h2,h3,h4,h5,h6{
 	}
 }
 
-@media (min-width:481px) and (max-width: 768px){
+@media (max-width: 768px){
 	/*buttons*/
 	.paddingL, .paddingR{
 		padding: 1rem;
 	}
+ 
+ .scroll-top1 {
+		right: 1.5vw;
+		bottom: 2vw;
+		line-height: 1.75em;
+}
 	/*buttons*/
 }
 
-@media (min-width: 769px){
+@media (max-width: 1200px){
 	.normal-cont{
 		padding: 2rem 5vw;
 	}
 }
-/* MEDIA QUERIES (BASADAS EN UNAH) */
+
+@media (min-width: 2560px){
+	.normal-cont{
+		padding: 4rem 20vw;
+	}
+	
+}
+
+@media (min-width: 3440px){
+	.normal-cont{
+		padding: 4rem 30vw;
+	}
+}

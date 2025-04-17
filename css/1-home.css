@@ -1,2 +1,16 @@
 /* LAST MODIFIED: 04/17/2025*/
 /* Utiliza este archivo para crear estilos especificos de esta pagina*/
+
+/* MEDIA QUERIES (BASADAS EN UNAH) */
+@media (max-width:480px){
+
+}
+
+@media (min-width:481px) and (max-width: 768px){
+
+}
+
+@media (min-width: 769px){
+
+}
+/* MEDIA QUERIES (BASADAS EN UNAH) */

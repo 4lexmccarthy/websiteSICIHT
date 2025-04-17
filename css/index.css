@@ -241,8 +241,10 @@ main {
 }
 
 .label {
+ width: 100% !important;
  opacity: 1 !important;
  color: var(--gray3) !important;
+ text-align: center !important;
 } /*overrides rules from global.css */
 /*contact-card*/
 
