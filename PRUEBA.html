@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio Web SICIHT 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f8f9fa; }
+    header, footer { background: #003366; color: white; text-align: center; padding: 1em; }
+    nav {
+      background: #0055a5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5em 1em;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section { padding: 2em; border-bottom: 1px solid #ccc; }
+    h2 { text-align: center; color: #003366; }
+    .img-button { background: none; border: none; cursor: pointer; padding: 0; display: block; margin: 0 auto; }
+    .img-button img { width: 60px; height: 60px; transition: transform 0.3s; }
+    .img-button:hover img { transform: scale(1.1); }
+    .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 1em; }
+    .carousel img { width: 100%; max-width: 300px; scroll-snap-align: center; border-radius: 10px; flex-shrink: 0; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .gallery img { width: 100%; border-radius: 8px; transition: transform 0.3s; }
+    .gallery img:hover { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      .img-button img { width: 40px; height: 40px; }
+      .carousel img { max-width: 250px; }
+      nav a { margin: 0.3em 0.5em; font-size: 0.9em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sitio Web SICIHT 2025</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Inicio</a>
+    <a href="#sobre-siciht">Sobre el SICIHT</a>
+    <a href="#mensaje-director">Mensaje del Director</a>
+    <a href="#estructura">Estructura</a>
+    <a href="#mision-vision">Misión y Visión</a>
+    <a href="#tramites-servicios">Trámites</a>
+    <a href="#informacion-institucional">Información</a>
+    <a href="#gestion-investigacion">Investigación</a>
+    <a href="#politica-normativa">Normativa</a>
+    <a href="#comunicacion-ciencia">Comunicación</a>
+    <a href="#formacion-cientifica">Formación</a>
+    <a href="#internacionalizacion">Internacionalización</a>
+  </nav>
+
+  <!-- Sección: Botón de Imagen -->
+  <section id="boton-imagen">
+    <h2>Botón de Imagen</h2>
+    <button class="img-button" onclick="window.location.href='https://unah.edu.hn'">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Ir al sitio UNAH">
+    </button>
+  </section>
+
+  <!-- Sección: Carrusel -->
+  <section id="carrusel">
+    <h2>Carrusel de Imágenes</h2>
+    <div class="carousel">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Imagen 1">
+      <img src="https://picsum.photos/id/1025/600/400" alt="Imagen 2">
+      <img src="https://picsum.photos/id/1035/600/400" alt="Imagen 3">
+    </div>
+  </section>
+
+  <!-- Sección: Galería -->
+  <section id="galeria">
+    <h2>Galería de Imágenes</h2>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/1040/400/300" alt="Galería 1">
+      <img src="https://picsum.photos/id/1041/400/300" alt="Galería 2">
+      <img src="https://picsum.photos/id/1042/400/300" alt="Galería 3">
+      <img src="https://picsum.photos/id/1043/400/300" alt="Galería 4">
+      <img src="https://picsum.photos/id/1044/400/300" alt="Galería 5">
+      <img src="https://picsum.photos/id/1045/400/300" alt="Galería 6">
+    </div>
+  </section>
+
+  <!-- Sitemap basado en el documento -->
+  <section id="home">
+    <h2>Home</h2>
+    <p>Bienvenido al portal oficial del SICIHT - UNAH. Aquí encontrarás información clave sobre investigación, formación y servicios institucionales.</p>
+  </section>
+
+  <section id="sobre-siciht">
+    <h2>Sobre el SICIHT</h2>
+    <p>Información general sobre el Sistema de Ciencia, Investigación, y Tecnología de Honduras.</p>
+  </section>
+
+  <section id="mensaje-director">
+    <h2>Mensaje del Director</h2>
+    <p>Palabras del director de la VRA-DICIHT acerca de los objetivos y metas institucionales.</p>
+  </section>
+
+  <section id="estructura">
+    <h2>Estructura de la VRA-DICIHT</h2>
+    <p>Organización interna y estructura funcional del área.</p>
+  </section>
+
+  <section id="mision-vision">
+    <h2>Misión y Visión</h2>
+    <p>Compromisos institucionales que guían la gestión y proyección del SICIHT.</p>
+  </section>
+
+  <section id="tramites-servicios">
+    <h2>Trámites y Servicios</h2>
+    <p>Servicios que ofrece el SICIHT a la comunidad investigadora y académica.</p>
+  </section>
+
+  <section id="informacion-institucional">
+    <h2>Información Institucional</h2>
+    <p>Documentos clave y datos de interés sobre la estructura y actividades de la institución.</p>
+  </section>
+
+  <section id="gestion-investigacion">
+    <h2>Gestión de Investigación</h2>
+    <p>Convocatorias, fondos y oportunidades de apoyo a la investigación científica.</p>
+  </section>
+
+  <section id="politica-normativa">
+    <h2>Política y Normativa</h2>
+    <p>Reglamentos y normativas que rigen las actividades del sistema científico nacional.</p>
+  </section>
+
+  <section id="comunicacion-ciencia">
+    <h2>Comunicación de la Ciencia</h2>
+    <p>Estrategias y medios para divulgar el conocimiento científico generado.</p>
+  </section>
+
+  <section id="formacion-cientifica">
+    <h2>Formación Científica</h2>
+    <p>Programas y eventos destinados a fortalecer las capacidades investigativas.</p>
+  </section>
+
+  <section id="internacionalizacion">
+    <h2>Internacionalización</h2>
+    <p>Vínculos y proyectos de cooperación internacional para potenciar la ciencia en Honduras.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SICIHT - UNAH. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
