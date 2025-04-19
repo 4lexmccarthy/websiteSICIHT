@@ -1,10 +1,10 @@
-/* LAST MODIFIED: 04/17/2025*/
+/* LAST MODIFIED: 04/19/2025*/
 /* Utiliza este archivo para crear los estilos de los componentes*/
 
 
 /* HEADER WRAPPER */
 .headerWrapper{
- padding: 0.6rem 0;
+ padding: 0.5rem;
  background-color: var(--color1);
  color: white;
  text-align: center;
@@ -20,19 +20,32 @@
 }
 /* HEADER WRAPPER */
 
-/* BOLITAS */
-.bolitas{
- color: red;
+/* IMAGE WRAPPER */
+.imageWrapper{
+ display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.imageWrapper img{
+ display: block;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  margin: 0;
-  padding: 20px;
-  color: #0a45aa;
-  text-align: center;
+.imgHorizontal img{
+ max-width: 50vw;
 }
+
+.imgVertical img{
+ max-height: 70vh;
+}
+
+.imgCuadrada  img{
+ max-width: 30vw;
+}
+/* IMAGE WRAPPER */
+
+
 
 .barra-titulo {
   font-size: 24px;
@@ -89,12 +102,6 @@ body {
 
 
 /* BARRA BOTONES */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-}
 
 .barra-titulo {
   background-color: #004080;
@@ -196,15 +203,29 @@ body {
 
 /* MEDIA QUERIES (BASADAS EN UNAH) */
 @media (max-width:480px){
-/* BOLITAS */
-.bolitas{
- color: azul;
+/* IMAGE WRAPPER */
+.imgHorizontal img{
+ max-width: 100%;
 }
-/* BOLITAS */
+.imgVertical img{
+ max-height: 50vh;
+}
+.imgCuadrada img{
+ max-width: 100%;
+}
+/* IMAGE WRAPPER */
+
 }
 
 @media (min-width:481px) and (max-width: 768px){
-
+/* IMAGE WRAPPER */
+.imgHorizontal img{
+ max-width: 80%;
+}
+.imgCuadrada img{
+ max-width: 80%;
+}
+/* IMAGE WRAPPER */
 }
 
 @media (min-width: 769px){
