@@ -16,7 +16,6 @@
 .headerWrapper > h4,
 .headerWrapper > h5,
 .headerWrapper > p{
- width: 90%;
  margin: 0.7rem 0 !important; /* tiene prioridad sobre estilos de la UNAH y de media queries*/
 }
 /* HEADER WRAPPER */
