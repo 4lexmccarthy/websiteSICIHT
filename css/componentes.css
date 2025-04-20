@@ -17,6 +17,7 @@
 .headerWrapper > h5,
 .headerWrapper > p{
  margin: 0.7rem 0 !important; /* tiene prioridad sobre estilos de la UNAH y de media queries*/
+ width: 95%;
 }
 /* HEADER WRAPPER */
 
@@ -136,159 +137,81 @@
 }
 /* VERTICAL CARD */
 
-.barra-titulo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #fefefe;
-}
-
-.nav-circles {
-  display: flex;
-  overflow-x: auto;
-  gap: 30px;
-  padding: 10px;
-  justify-content: center;
-  scrollbar-width: thin;
-}
-
-.circle-btn {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  width: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #0a45aa;
-  transition: transform 0.2s ease;
-}
-
-.circle-btn:hover {
-  transform: scale(1.05);
-}
-
-.icon-placeholder {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #fffdfd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.circle-btn span {
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-/* BOLITAS */
-
-
-/* BARRA BOTONES */
-
-.barra-titulo {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-weight: bold;
-}
-
-.nav-circles {
+/* NAVBOX */
+.navbox {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-  background: #e7f0f8;
+  /* gap: 1.5rem; */
+  background: var(--color4);
 }
 
-.circle-btn {
-  background-color: #dcebf7;
+.navboxItem{
+  display: flex;
+	 flex-flow: column nowrap;
+	 align-items: center;
+  width: 200px;
+  padding: 1rem 1.75rem;
   border: none;
-  border-radius: 10px;
-  padding: 1rem;
-  width: 120px;
+  color: white;
+  text-decoration: none;
   text-align: center;
-  cursor: pointer;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
-.circle-btn:hover {
-  background-color: #c0dcf3;
-}
-
-.icon-placeholder {
-  width: 60px;
-  height: 60px;
-  background-color: #b3cde0;
-  margin: 0 auto 0.5rem;
+.navboxIconWrapper {
+  display: flex;
+	 flex-flow: column nowrap;
+	 justify-content: center;
+	 align-items: center;
+  width: 128px;
+  padding: 2rem;
+  margin: 1rem auto 0 auto;
   border-radius: 50%;
+  background: var(--color1);
 }
 
-.circle-btn span {
-  font-size: 0.8rem;
-  color: #003366;
+.navboxText{
+ font-size: 1.2rem;
+ line-height: 1 !important; /*tiene prioridad sobre los estilos de la UNAH*/
+ margin: 1rem auto;
 }
+
+.currentPage{
+ background: #2790a4;
+}
+.currentPage div{
+ background: #7ebfda;
+}
+
+.navboxItem:hover{
+ background: #2790a4;
+ color: white;
+}
+/* NAVBOX */
+
 
 .info-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-  gap: 1rem;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ margin: 2rem 0;
+ gap: 1rem;
 }
 
 .info-btn {
-  padding: 1rem 2rem;
-  border: none;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 1rem;
-  min-width: 180px;
-  transition: background-color 0.3s ease;
+ padding: 1rem 2rem;
+ border: none;
+ color: white;
+ font-weight: bold;
+ cursor: pointer;
+ border-radius: 6px;
+ font-size: 1rem;
+ min-width: 180px;
+ transition: background-color 0.3s ease;
 }
 
-.revistas {
-  background-color: #6dbedc;
-}
-
-.periodico {
-  background-color: #55b3c6;
-}
-
-.produccion {
-  background-color: #57c0b9;
-}
-
-.info-btn:hover {
-  opacity: 0.9;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-circles, .info-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .circle-btn {
-    width: 80%;
-  }
-
-  .info-btn {
-    width: 80%;
-  }
-}
-/* BARRA BOTONES */
 
 /* MEDIA QUERIES (BASADAS EN UNAH) */
 @media (max-width:480px){
@@ -334,7 +257,7 @@ text-align: center;
  padding: 2rem 1rem;
 }
 
-.verticalCard img{
+.verticalCard img{ 
  margin-bottom: 0.5rem;
  margin-right: auto;
 }
@@ -347,6 +270,29 @@ text-align: center;
  text-align: left;
 }
 /* VERTICAL CARD */
+
+/*NAVBOX*/
+.navbox{
+ flex-direction: column;
+ align-items: center;
+}
+
+.navboxItem{
+ flex-direction: row;
+ width: 100%;
+ padding: 1rem;
+}
+.navboxIconWrapper{
+ width: 80px;
+ padding: 0.9rem;
+ margin: 0 1rem 0 0;
+}
+.navboxText{
+ width: 100%;
+ font-size: 1.1rem;
+ text-align: left !important; /*tiene prioridad sobre estilos de normal-cont (mejor borremos esa clase, no la usamos)*/
+}
+/*NAVBOX*/
 }
 
 @media (min-width:481px) and (max-width: 768px){
@@ -366,6 +312,29 @@ text-align: center;
  padding: 2rem 1rem;
 }
 /* HORIZONTAL CARD */
+
+/*NAVBOX*/
+.navbox{
+ flex-direction: column;
+ align-items: center;
+}
+
+.navboxItem{
+ flex-direction: row;
+ width: 100%;
+ padding: 1rem;
+}
+.navboxIconWrapper{
+ width: 80px;
+ padding: 0.9rem;
+ margin: 0 1rem 0 0;
+}
+.navboxText{
+ width: 100%;
+ font-size: 1.1rem;
+ text-align: left;
+}
+/*NAVBOX*/
 }
 
 @media (min-width: 769px){
