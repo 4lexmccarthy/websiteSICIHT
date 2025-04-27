@@ -17,6 +17,124 @@
  <link rel="stylesheet" href="css/estilosGlobales.css">
  <link rel="stylesheet" href="css/componentes.css">
  <link rel="stylesheet" href="css/1-home.css">
+ 
+ <style>
+    
+    .img-button { background: none; border: none; cursor: pointer; padding: 0; display: block; margin: 0 auto; }
+    .img-button img { width: 60px; height: 60px; transition: transform 0.3s; }
+    .img-button:hover img { transform: scale(1.1); }
+    .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 1em; }
+    .carousel img { width: 100%; max-width: 300px; scroll-snap-align: center; border-radius: 10px; flex-shrink: 0; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .gallery img { width: 100%; border-radius: 8px; transition: transform 0.3s; }
+    .gallery img:hover { transform: scale(1.05); }
+    @media (max-width: 600px) {
+      .img-button img { width: 40px; height: 40px; }
+      .carousel img { max-width: 250px; }
+
+    }
+
+    .img {
+        height: auto;
+        cursor: pointer; /* Indica que se puede hacer clic */
+    }
+
+    .img.grande {
+        width: 500px; /* Tamaño ampliado */
+    }
+
+  </style>
+
+
+<style>
+    
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    #myImg:hover {opacity: 0.7;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    
+    /* Add Animation */
+    .modal-content, #caption {  
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)} 
+      to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+    </style>
+
  <style>
 .previewArea{
  width: 100%;
@@ -37,6 +155,7 @@ footer {
 	user-select: none;
 }
 /*footer*/
+
  </style>
 </head>
 <body style="background-color: var(--gray4);">
@@ -51,11 +170,67 @@ footer {
   <header class="headerWrapper flexContainer">
    <h2 class="h2">Sobre la VRA-DICIHT</h2>
   </header>
+  <nav class="navbox">
+
+    <a class="navboxItem" href="#">
+     <div class="navboxIconWrapper">
+      <img src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/icons/director.svg" alt="icono de prueba">
+     </div>
+     <p class="navboxText">Mensaje del Director</p>
+    </a>
+  
+    <a class="navboxItem currentPage" href="#">
+     <div class="navboxIconWrapper">
+      <img src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/icons/estructura.svg" alt="icono de prueba">
+     </div>
+      <p class="navboxText">Estructura</p>
+    </a>
+  
+    <a class="navboxItem" href="#">
+     <div class="navboxIconWrapper">
+      <img src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/icons/filosofia.svg" alt="icono de prueba">
+     </div>
+      <p class="navboxText">Misión y Visión</p>
+    </a>
+  
+    <a class="navboxItem" href="#">
+     <div class="navboxIconWrapper">
+      <img src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/icons/instancias.svg" alt="icono de prueba">
+     </div>
+     <p class="navboxText">Instancias del SICIHT</p>
+    </a>
+  
+    <a class="navboxItem" href="#">
+     <div class="navboxIconWrapper">
+      <img src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/icons/tramites.svg" alt="icono de prueba">
+     </div>
+     <p class="navboxText">Tramites y Servicios</p>
+    </a>
+   </nav>
+
+  <header class="headerWrapper flexContainer">
+    <h2 class="h2">ESTRUCTURA DE INVESTIGACIÓN</h2>
+   </header>
+ 
 
   <header class="headerWrapper flexContainer" style="background-color: white; color: var(--color1);">
    <h2 class="h2">Nuestra Dirección</h2>
   </header>
   
+  <!-- Sección: Galería -->
+  <section id="galeria">
+    <h2>Galería de Imágenes</h2>
+    <div class="gallery">
+      <img src="https://picsum.photos/id/1040/400/300" alt="Galería 1" id="myImg">
+      <img src="https://picsum.photos/id/1041/400/300" alt="Galería 2" id="myImg">
+      <img src="https://picsum.photos/id/1042/400/300" alt="Galería 3" id="imagen">
+      <img src="https://picsum.photos/id/1043/400/300" alt="Galería 4" id="imagen">
+      <img src="https://picsum.photos/id/1044/400/300" alt="Galería 5" id="imagen">
+      <img src="https://picsum.photos/id/1045/400/300" alt="Galería 6" id="imagen">
+    </div>
+  </section>
+
+
  <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
  </div>
  <h2 class="h2">Pendiente:</h2>
@@ -67,5 +242,35 @@ footer {
 <footer>
  <p >McCarthy-Beckan | 2025</p>
 </footer>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var img = document.getElementById("myImg");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+  </script>
+
 </body>
 </html>
