@@ -16,6 +16,7 @@
  <!-- Stylesheets -->
  <link rel="stylesheet" href="css/estilosGlobales.css">
  <link rel="stylesheet" href="css/componentes.css">
+ <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
  <style>
 .previewArea{
  width: 100%;
@@ -292,21 +293,119 @@ footer {
 <!-- SECCION DE COMPONENTE -->
 
  <!-- SECCION DE COMPONENTE -->
- <h2 class="h2" style="margin-top: 3rem;">Nombre del Componente (nombreComponente)</h2>
- <p class="p left" style="margin-top: 0;">Descripcion del componente aqui. Incluir notas y detalles utiles aqui plis.</p>
+ <h2 class="h2" style="margin-top: 3rem;">Galeria (Instancia de PhotoSwipe)</h2>
+ <p class="p left" style="margin-top: 0;">Galeria de imagenes con lightbox. Para funcionar, este componente utiliza <a href="https://photoswipe.com/" class="a">PhotoSwipe V5</a>. Para llamar el paquete sin necesidad de crear un build usamos <a href="https://unpkg.com/" class="a">UNPKG</a>.</p>
+ <h3 class="h3">Notas importantes:</h3>
+ <ul class="left">
+  <li>Es necesario incluir el link de la imagen en dos elementos (a y en img)</li>
+  <li>hay que definir el tamaño de la imagen una vez que este en el lightbox (que pereza haha) Seguramente hay opciones para cambiar este comportamiento. <a href="https://photoswipe.com/getting-started/" class="a">Ver documentacion</a>.</li>
+  <li>el caption que se muestra es opcional (eleminar elemento p)</li>
+  <li>Es posible agregar captions al lightbox. <a href="https://github.com/dimsemenov/photoswipe-dynamic-caption-plugin" class="a"> ver plugin</a>.</li>
+ </ul>
  <div class="previewArea" style="min-height: auto;">
   <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
-
-  <h1 class="h1">Coloca tu codigo aqui</h1>
-  
+ 
+   <div class="galeriaWrapper" id="galeriaEjemplo">
+    <a
+      href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+      data-pswp-width="1875"
+      data-pswp-height="2500"
+      target="_blank"
+      class="galeriaItem"
+    >
+      <img
+        src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+        alt=""
+      />
+      <p>Caption opcional.</p>
+    </a>
+    <a
+      href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/ricardoMatamoros-2024-2square.jpg"
+      data-pswp-width="800"
+      data-pswp-height="800"
+      target="_blank"
+      class="galeriaItem"
+    >
+      <img
+        src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/ricardoMatamoros-2024-2square.jpg"
+        alt=""
+      />
+      <p>La siguiente no tiene caption</p>
+    </a>
+    <a
+      href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/ricardoMatamoros-2024-2.jpg"
+      data-pswp-width="390"
+      data-pswp-height="487"
+      target="_blank"
+      class="galeriaItem"
+    >
+      <img
+        src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/ricardoMatamoros-2024-2.jpg"
+        alt=""
+      />
+    </a>
+    <a
+    href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/ricardoMatamoros-2024-2.jpg"
+    data-pswp-width="390"
+    data-pswp-height="487"
+    target="_blank"
+    class="galeriaItem"
+  >
+    <img
+      src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/ricardoMatamoros-2024-2.jpg"
+      alt=""
+    />
+    <p>Y todo oks.</p>
+  </a>
+  <a
+  href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+  data-pswp-width="2500"
+  data-pswp-height="1666"
+  target="_blank"
+  class="galeriaItem"
+>
+  <img
+    src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+    alt=""
+  />
+  <p>Esta tiene un caption largo, muy largo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, totam!</p>
+</a>
+  </div>
+ 
  <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
  </div>
 <!-- SECCION DE COMPONENTE -->
 
+<!-- SECCION DE COMPONENTE -->
+
+ <!-- SECCION DE COMPONENTE -->
+ <h2 class="h2" style="margin-top: 3rem;">Nombre del Componente (nombreComponente)</h2>
+ <p class="p left" style="margin-top: 0;">Descripcion del componente aqui. Incluir notas y detalles utiles aqui plis.</p>
+ <div class="previewArea" style="min-height: auto;">
+ <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+  <p class="h3">Codigo del componente aqui plis. thanks</p>
+ <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+ </div>
+<!-- SECCION DE COMPONENTE -->
 </main>
 
 <footer>
  <p >McCarthy-Beckan | 2025</p>
 </footer>
+<!-- SCRIPT GALERIA -->
+<script type="module">
+
+// import sheet from 'https://unpkg.com/photoswipe/dist/photoswipe.css'assert { type: "css" };
+import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#galeriaEjemplo',
+  children: 'a',
+  pswpModule: () => import('https://unpkg.com/photoswipe'),
+});
+
+lightbox.init();
+</script>
+<!-- SCRIPT GALERIA -->
 </body>
 </html>

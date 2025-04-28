@@ -191,9 +191,7 @@
 }
 /* NAVBOX */
 
-
 /* BOLITAS GRANDES (basado en navbox)*/
-
 .bolitasGrandes{
  display: flex;
  flex-flow: column nowrap;
@@ -250,6 +248,36 @@
   color: white;
  }
 /* BARRA BOTONES */
+
+/*GALERIA*/ 
+.galeriaWrapper{
+ display: flex;
+ flex-flow: row;
+ flex-wrap: wrap;
+ gap: 2rem;
+ align-items: center;
+ justify-content: center;
+}
+
+.galeriaItem{
+ width: 300px;
+ padding: 1rem;
+ /* background: red; */
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ text-decoration: none;
+}
+
+.galeriaItem img{
+ max-width: 275px;
+}
+.galeriaItem p{
+ margin-bottom: auto;
+ color: black;
+ font-size: 1.1rem ;
+}
+/*GALERIA*/ 
 
 /* MEDIA QUERIES (BASADAS EN UNAH) */
 
