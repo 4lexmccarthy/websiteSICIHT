@@ -211,6 +211,25 @@ footer {
   <header class="headerWrapper flexContainer">
     <h2 class="h2">ESTRUCTURA DE INVESTIGACIÓN</h2>
    </header>
+
+   <div class="galeriaWrapper2" id="galeriaEjemplo">
+    <div class="imageWrapper2 imgVertical2" id="EstructuraDICHIT">
+      <a
+      href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EstructuraSICIHT2.png"
+      data-pswp-width="1620"
+      data-pswp-height="1080"
+      target="_blank"
+      class="imgHorizontal2"
+    >
+      <img
+        src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EstructuraSICIHT2.png"
+        alt=""
+      />
+    </a>
+     </div>
+
+   </div>
+   
  
 
   <header class="headerWrapper flexContainer" style="background-color: white; color: var(--color1);">
@@ -218,17 +237,95 @@ footer {
   </header>
   
   <!-- Sección: Galería -->
-  <section id="galeria">
-    <h2>Galería de Imágenes</h2>
-    <div class="gallery">
-      <img src="https://picsum.photos/id/1040/400/300" alt="Galería 1" id="myImg">
-      <img src="https://picsum.photos/id/1041/400/300" alt="Galería 2" id="myImg">
-      <img src="https://picsum.photos/id/1042/400/300" alt="Galería 3" id="imagen">
-      <img src="https://picsum.photos/id/1043/400/300" alt="Galería 4" id="imagen">
-      <img src="https://picsum.photos/id/1044/400/300" alt="Galería 5" id="imagen">
-      <img src="https://picsum.photos/id/1045/400/300" alt="Galería 6" id="imagen">
+  <div class="previewArea" style="min-height: auto;">
+    <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+   
+     <div class="galeriaWrapper" id="galeriaEjemplo">
+      <a
+        href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT1.jpg"
+        data-pswp-width="1620"
+        data-pswp-height="1080"
+        target="_blank"
+        class="galeriaItem"
+      >
+        <img
+          src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT1.jpg"
+          alt=""
+        />
+        <p>Caption opcional.</p>
+      </a>
+      <a
+        href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT2.jpg"
+        data-pswp-width="1356"
+        data-pswp-height="1080"
+        target="_blank"
+        class="galeriaItem"
+      >
+        <img
+          src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT2.jpg"
+          alt=""
+        />
+        <p>La siguiente no tiene caption</p>
+      </a>
+      <a
+        href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT3.jpg"
+        data-pswp-width="1620"
+        data-pswp-height="1080"
+        target="_blank"
+        class="galeriaItem"
+      >
+        <img
+          src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT3.jpg"
+          alt=""
+        />
+      </a>
+      <a
+      href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT4.jpg"
+      data-pswp-width="1620"
+      data-pswp-height="1080"
+      target="_blank"
+      class="galeriaItem"
+    >
+      <img
+        src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT4.jpg"
+        alt=""
+      />
+      <p>Y todo oks.</p>
+    </a>
+    <a
+    href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT5.jpg"
+    data-pswp-width="1620"
+    data-pswp-height="1080"
+    target="_blank"
+    class="galeriaItem"
+  >
+    <img
+      src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT5.jpg"
+      alt=""
+    />
+    <p>Esta tiene un caption largo, muy largo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, totam!</p>
+  </a>
     </div>
-  </section>
+   
+   <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
+   </div>
+
+  <!-- SCRIPT GALERIA -->
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
+<script type="module">
+
+  // import sheet from 'https://unpkg.com/photoswipe/dist/photoswipe.css'assert { type: "css" };
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+  
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#galeriaEjemplo',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe'),
+  });
+  
+  lightbox.init();
+  </script>
+  <!-- SCRIPT GALERIA -->
 
 
  <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
