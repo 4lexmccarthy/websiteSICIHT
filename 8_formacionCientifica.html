@@ -71,6 +71,39 @@ footer {
 
   </nav>
 
+  <div class="galeriaWrapper2" id="galeriaEjemplo">
+   <div class="imageWrapper2 imgVertical2" id="EstructuraDICHIT">
+     <a
+     href="https://diciht.unah.edu.hn/assets/DICIHT/paginas/nuevo-pagina/_resampled/ResizedImageWzYwMCw4MzFd/2.jpg"
+     data-pswp-width="600"
+     data-pswp-height="831"
+     target="_blank"
+     class="imgVertical2"
+   >
+     <img
+       src="https://diciht.unah.edu.hn/assets/DICIHT/paginas/nuevo-pagina/_resampled/ResizedImageWzYwMCw4MzFd/2.jpg"
+       alt=""
+       style="max-height: 50vh;"
+     />
+   </a>
+    </div>
+  <!-- SCRIPT GALERIA -->
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
+<script type="module">
+
+  // import sheet from 'https://unpkg.com/photoswipe/dist/photoswipe.css'assert { type: "css" };
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js';
+  
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#galeriaEjemplo',
+    children: 'a',
+    pswpModule: () => import('https://unpkg.com/photoswipe'),
+  });
+  
+  lightbox.init();
+  </script>
+  <!-- SCRIPT GALERIA -->
+  </div>
  <!-- INSERTA TU CODIGO PERSONALIZADO AQUI  -->
  </div>
 </main>

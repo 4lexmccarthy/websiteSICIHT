@@ -16,124 +16,6 @@
  <!-- Stylesheets -->
  <link rel="stylesheet" href="css/estilosGlobales.css">
  <link rel="stylesheet" href="css/componentes.css">
- <link rel="stylesheet" href="css/1-home.css">
- 
- <style>
-    
-    .img-button { background: none; border: none; cursor: pointer; padding: 0; display: block; margin: 0 auto; }
-    .img-button img { width: 60px; height: 60px; transition: transform 0.3s; }
-    .img-button:hover img { transform: scale(1.1); }
-    .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 1em; }
-    .carousel img { width: 100%; max-width: 300px; scroll-snap-align: center; border-radius: 10px; flex-shrink: 0; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
-    .gallery img { width: 100%; border-radius: 8px; transition: transform 0.3s; }
-    .gallery img:hover { transform: scale(1.05); }
-    @media (max-width: 600px) {
-      .img-button img { width: 40px; height: 40px; }
-      .carousel img { max-width: 250px; }
-
-    }
-
-    .img {
-        height: auto;
-        cursor: pointer; /* Indica que se puede hacer clic */
-    }
-
-    .img.grande {
-        width: 500px; /* Tamaño ampliado */
-    }
-
-  </style>
-
-
-<style>
-    
-    #myImg {
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    
-    #myImg:hover {opacity: 0.7;}
-    
-    /* The Modal (background) */
-    .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    }
-    
-    /* Modal Content (image) */
-    .modal-content {
-      margin: auto;
-      display: block;
-      width: 80%;
-      max-width: 700px;
-    }
-    
-    /* Caption of Modal Image */
-    #caption {
-      margin: auto;
-      display: block;
-      width: 80%;
-      max-width: 700px;
-      text-align: center;
-      color: #ccc;
-      padding: 10px 0;
-      height: 150px;
-    }
-    
-    /* Add Animation */
-    .modal-content, #caption {  
-      -webkit-animation-name: zoom;
-      -webkit-animation-duration: 0.6s;
-      animation-name: zoom;
-      animation-duration: 0.6s;
-    }
-    
-    @-webkit-keyframes zoom {
-      from {-webkit-transform:scale(0)} 
-      to {-webkit-transform:scale(1)}
-    }
-    
-    @keyframes zoom {
-      from {transform:scale(0)} 
-      to {transform:scale(1)}
-    }
-    
-    /* The Close Button */
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 35px;
-      color: #f1f1f1;
-      font-size: 40px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    
-    .close:hover,
-    .close:focus {
-      color: #bbb;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px){
-      .modal-content {
-        width: 100%;
-      }
-    }
-    </style>
 
  <style>
 .previewArea{
@@ -230,8 +112,6 @@ footer {
 
    </div>
    
- 
-
   <header class="headerWrapper flexContainer" style="background-color: white; color: var(--color1);">
    <h2 class="h2">Nuestra Dirección</h2>
   </header>
@@ -252,7 +132,7 @@ footer {
           src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT1.jpg"
           alt=""
         />
-        <p>Caption opcional.</p>
+        <p>Equipo DICIHT</p>
       </a>
       <a
         href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT2.jpg"
@@ -265,7 +145,7 @@ footer {
           src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT2.jpg"
           alt=""
         />
-        <p>La siguiente no tiene caption</p>
+        <p>Depto. de Gestión y Apoyo Administrativo</p>
       </a>
       <a
         href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT3.jpg"
@@ -278,6 +158,7 @@ footer {
           src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT3.jpg"
           alt=""
         />
+        <p>Depto. de Gestión Curricular de la Investigación.</p>
       </a>
       <a
       href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT4.jpg"
@@ -290,7 +171,7 @@ footer {
         src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT4.jpg"
         alt=""
       />
-      <p>Y todo oks.</p>
+      <p>Depto. de Gestión de la Investigación. para el DHS</p>
     </a>
     <a
     href="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT5.jpg"
@@ -303,7 +184,7 @@ footer {
       src="https://diciht.unah.edu.hn/assets/propuestaWebsiteSICIHT2025/img/EquipoDICIHT5.jpg"
       alt=""
     />
-    <p>Esta tiene un caption largo, muy largo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, totam!</p>
+    <p>Depto. de Gestión de la Invest. en Innovación</p>
   </a>
     </div>
    
